@@ -50,3 +50,27 @@ a{
 aside img{
     width: 250px;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: calc(8px + 2vw); 
+    }
+    main{    
+           
+        grid-template-areas: " h h "
+                             " n n "
+                             " a as "
+                             " f f "
+    }
+  }
+  @media screen and (max-width: 400px) {
+    body {
+        font-size: calc(8px + 2vw);
+    }
+    main{        
+        grid-template-areas: " h h "
+                             " n n "
+                             " a as "
+                             " f f "
+    }
+  }
