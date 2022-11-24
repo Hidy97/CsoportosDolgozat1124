@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+main{
+    display: grid;
+    grid-template-areas:    "h h h"
+                            "n n n"
+                            "a a as"
+                            "f f f";
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+
+aside img{
+    width: 250px;
+}
