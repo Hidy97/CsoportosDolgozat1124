@@ -1,12 +1,18 @@
+*{
+    border-radius: 15px;
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(164, 230, 193);
 }
 
 main{
     margin: auto;
     width: 100%;
     max-width: 1000px;
+    background-color: rgb(129, 228, 172);
 }
 
 main{
