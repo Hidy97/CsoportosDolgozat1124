@@ -1,2 +1,2 @@
 # CsoportosDolgozat1124
-ul tag egymás mellé
+Anita nem jut gépközelbe, megcsinálta a ráeső részt, mi töltjük fel neki.
