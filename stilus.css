@@ -1,14 +1,13 @@
 *{
-    padding-right: 5px;
-    padding-left: 5px;
-    color: rgb(95, 64, 6);
+    color: rgb(13, 61, 24);
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(155, 248, 197);
+    background-color: rgb(9, 105, 32);
+    background: linear-gradient(rgb(13, 61, 24) 0%, rgb(9, 105, 32) 35%, rgb(131, 236, 156) 100%);
 }
 
 img{
@@ -16,21 +15,32 @@ img{
     overflow: hidden;
     width: 300px;
     border-radius: 20%;
-    padding: 5px;
 }
 
 header, nav, footer, h2{
     text-align: center;
 }
 
+h1{
+    color: rgb(245, 245, 245);
+}
+
+h3{
+    padding-left: 10px;
+}
+
+article, aside{
+    padding: 15px;
+}
+
 main{
     margin: auto;
     width: 100%;
     max-width: 1000px;
-    
-    background-color: rgb(201, 250, 223);
+    background-color: rgb(238, 233, 186);
 }
 
+/*Gridelés a mainre, eleje*/
 main{
     display: grid;
     grid-template-areas:    "h h h"
@@ -41,6 +51,8 @@ main{
 
 header{
     grid-area: h;
+    background-image: url("kepek/aloe.jpg");
+    
 }
 
 nav{
@@ -59,52 +71,162 @@ footer{
     grid-area: f;
 }
 
+/*Gridelés a mainre, vége*/
+
 nav li{
     list-style-type: none;
 }
 
 nav ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 header h1{
     font-size: 50px;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Franklin Gothic Medium';
     letter-spacing: 2px;
 }
 
 a{
     text-decoration: none;
-    color: rgb(255, 166, 0);
+    color: rgb(21, 51, 10);
     font-size: 24px;
 }
 
-p{
-    text-indent: 15px;
-    font-size: 18px;
+nav a:hover{
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
-footer{
-    font-size: 16px;
+p{
+    text-indent: 18px;
+    font-size: 18px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed rgb(9, 105, 32);
+    border-radius: 4%;
 }
 
 aside{
     display: grid;
     grid-template-rows: 250px 250px 250px 250px;
     padding-top: 50px;
+    border-left: 2px dashed rgb(9, 105, 32);
 }
 
+footer{
+    font-size: 16px;
+    background-color: rgb(185,115,43);
+}
+
+/*Képgaléria*/
+
+/*Képgaléria grid*/
+#galeriacontainer{
+    display: grid;
+    grid-template-areas:    "gf gf gf"
+                            "gm gm gm"
+                            "gc gc gc"
+                            "gl gl gl";
+}
+
+#galeriafejlec{
+    grid-area: gf;
+    background-image: url("kepek/aloe.jpg");
+    
+}
+
+#galeriamenu{
+    grid-area: gm;
+}
+
+#galeriacikk{
+    grid-area: gc;
+}
+
+#galerialablec{
+    grid-area: gl;
+}
+/*Képgaléria grid vege*/
+
+.secnagy{
+    display: grid;
+    grid-template-rows: repeat(4, 80px 1fr);
+}
+
+.seckicsi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.galeria h3, p{
+    text-align: center;
+}
+
+/*Polaroid/Keretes mozgó képek*/
+#rozsa div{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(211, 250, 220);
+    background: linear-gradient(180deg, rgb(238, 233, 186), rgb(238, 127, 127));
+    box-shadow: 5px 5px 5px #dfdbdb;
+}
+
+#margareta div{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(211, 250, 220);
+    background: linear-gradient(180deg, rgb(238, 233, 186), rgb(255, 255, 255));
+    box-shadow: 5px 5px 5px #dfdbdb;
+}
+
+#aloe div{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(211, 250, 220);
+    background: linear-gradient(180deg, rgb(238, 233, 186), rgb(118, 199, 94));
+    box-shadow: 5px 5px 5px #dfdbdb;
+}
+
+#szilfi div{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(211, 250, 220);
+    background: linear-gradient(180deg, rgb(238, 233, 186), rgb(228, 231, 50));
+    box-shadow: 5px 5px 5px #dfdbdb;
+}
+
+/*Polaroid/Keretes mozgó képek vége*/
+
+div.rotate_right {
+    transform: rotate(2deg);
+}
+
+div.rotate_left {
+    transform: rotate(-2deg);
+}
+
+.seckicsi div.rotate_left:hover {
+    transform: rotate(3deg);
+}
+
+.seckicsi div.rotate_right:hover {
+    transform: rotate(-3deg);
+}
+
+.kepgkepek{
+    border-radius: 0%;
+}
+
+/*Képgaléria vége*/
+
 @media screen and (max-width: 700px) {
-    *{
-        padding: 0;
-        margin: 0;
-    }
     body {
         font-size: calc(8px + 2vw);
     }
-    main{    
-        padding: 10px;                   
+    main{         
         grid-template-areas: " h h "
                              " n n "
                              " a a "
@@ -121,20 +243,40 @@ aside{
 
     aside{
         margin: auto;
+        border: none;
     }
+    
     h3 {
         padding: 10px;
     }
-    p{
-        text-align: justify;
+
+    /*Képgaléria*/
+    #galeriacontainer{
+        grid-template-areas:    "gf gf"
+                                "gm gm"
+                                "gc gc"
+                                "gl gl";
     }
+
+    .seckicsi{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seckicsi div.rotate_right {
+        transform: rotate(0deg);
+    }
+
+    .seckicsi div.rotate_left {
+        transform: rotate(-0deg);
+    }
+    .seckicsi div.rotate_left:hover {
+        transform: rotate(0deg);
+    }
+    .seckicsi div.rotate_right:hover {
+        transform: rotate(-0deg);
   }
-  @media screen and (max-width: 400px) {
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    
+  
+  @media screen and (max-width: 400px) {    
     a{
         font-size: calc(8px + 1vw);
     }
@@ -153,7 +295,7 @@ aside{
         width: 100%;
     }
 
-    p, h1, a{
+    h1, a{
         font-size: calc(8px + 2vw);
     }
     main{        
@@ -175,4 +317,17 @@ aside{
     img{
         width: 100%;
     }
-  }
+
+    /*Képgaléria*/
+    #galeriacontainer{
+        grid-template-areas:    "gf"
+                                "gm"
+                                "gc"
+                                "gl";
+    }
+
+    .seckicsi{
+        grid-template-columns: 1fr;
+    }
+}
+}
